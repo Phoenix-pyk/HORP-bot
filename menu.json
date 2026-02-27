@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0",
+  "allergen_vocab": [
+    "dairy" ,
+    "egg",
+    "tree_nut",
+    "peanut",
+    "sesame",
+    "gluten",
+    "mushroom",
+    "allium",
+    "avocado",
+    "shellfish",
+    "fish"
+  ],
+  "ingredient_flags_vocab": [
+    "soy_sauce",
+    "oyster_sauce",
+    "almond",
+    "peanut_oil",
+    "mushroom",
+    "sesame_oil",
+    "sesame_seed",
+    "pork",
+    "scallion",
+    "cilantro"
+  ],
+  "items": [
+        {
+  "id": "A01",
+  "name": "Spicy Marinated Cucumbers",
+  "category": "appetizer",
+
+  "components": [
+    {
+      "name": "Toasted sesame seeds",
+      "contains_allergens": ["sesame"],
+      "contains_ingredient_flags": ["sesame_seed"],
+      "notes": "can be removed"
+    },
+    {
+      "name": "marinade",
+      "contains_allergens": ["sesame"],
+      "contains_ingredient_flags": ["sesame_oil"],
+      "notes": "sesame oil in the marinade, cannot be removed. Some sesame-allergic guests may tolerate this"
+    }
+
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [
+    {"when" : {
+        "avoid_ingredient_flags": ["sesame_seed"]
+        },
+      "action": "remove",
+      "target_component": "Toasted sesame seeds",
+      "notes" : "Can be made without sesame seeds upon request for those who tolerate sesame oil"
+    }
+  ],
+
+  "tags": ["vegetarian", "spicy"],
+  "pairing_tags": []
+    },
+
+    {
+  "id": "A02",
+  "name": "Juicy Chicken Pot Stickers",
+  "category": "appetizer",
+
+  "components": [
+    {
+      "name": "bacon",
+      "contains_allergens": [],
+      "contains_ingredient_flags": ["pork"],
+      "notes": "bacon is inside the potstickers and cannot be removed"
+    },
+    {
+      "name": "potsticker wrapper",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": [],
+      "notes": "wrapper contains gluten"
+    }
+  ],
+
+  "cross_contact_risk": ["shellfish"],
+  "modifications": [],
+
+  "tags": [],
+  "pairing_tags": []
+    },
+
+      {
+  "id": "A03",
+  "name": "Pork and Shrimp Wontons",
+  "category": "appetizer",
+
+  "components": [
+    {
+      "name": "wontons wrapper",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": [],
+      "notes": "wrapper contains gluten"
+    },
+    { "name": "fillings",
+      "contains_allergens": ["shellfish"],
+      "contains_ingredient_flags": ["pork"],
+      "notes": "fillings contain pork and shrimp, cannot be removed"
+    },
+    {
+      "name": "garnish",
+      "contains_allergens": ["sesame"],
+      "contains_ingredient_flags": ["sesame_seed","scallion"],
+      "notes": ""
+    }
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [
+    {
+      "when": {
+        "avoid_ingredient_flags": ["sesame_seed","scallion"]
+      },
+      "action": "remove",
+      "target_component": "garnish",
+      "notes": "Can be made without sesame seeds or scallions"
+    }
+  ],
+
+  "tags": ["spicy"],
+  "pairing_tags": []
+    },
+    {
+  "id": "A04",
+  "name": "Steamed Eggplant",
+  "category": "appetizer",
+
+  "components": [
+    {
+      "name": "sauce",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": [],
+      "notes": "sauce contains gluten"
+    },
+    {
+      "name": "chilli crisp",
+      "contains_allergens": ["tree_nut"],
+      "contains_ingredient_flags": ["almond"],
+      "notes": "topped with chilli crisp containing almonds, can be removed"
+    }
+
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [
+    {
+      "when": {
+        "avoid_allergens": ["tree_nut"]
+      },
+      "action": "remove",
+      "target_component": "chilli crisp",
+      "notes": "Can be made without chilli crisp topping"
+    }
+  ],
+
+  "tags": ["spicy"],
+  "pairing_tags": []
+    },
+    {
+  "id": "A05",
+  "name": "Tuna TarTare",
+  "category": "appetizer",
+
+  "components": [
+    {
+      "name": "fillings",
+      "contains_allergens": ["fish","mushroom","avocado"],
+      "contains_ingredient_flags": [],
+      "notes": "raw tuna, yuzu dressing, shiitake mushrooms, and avocado"
+    },
+    {
+      "name": "pani poori cups",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags":[],
+      "notes": "can be substituted with lettuce wraps"
+    }
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [
+    {
+      "when": {
+        "avoid_allergens":["gluten"]
+      },
+      "action": "substitute",
+      "target_component": "pani poori cups",
+      "substitute_with": "lettuce wraps",
+      "notes": "can be substituted with lettuce wraps to avoid gluten"
+    }
+  ],
+
+  "tags": ["raw_fish"],
+  "pairing_tags": []
+    },
+    {
+  "id": "E01",
+  "name": "Mala Chicken",
+  "category": "entree",
+
+  "components": [
+    {
+      "name": "chicken",
+      "contains_allergens": [],
+      "contains_ingredient_flags": [],
+      "notes": ""
+    },
+    {
+      "name": "marinade",
+      "contains_allergens": [],
+      "contains_ingredient_flags": ["soy_sauce","oyster_sauce"],
+      "notes": "marinated with soy sauce and oyster sauce, cannot be removed"
+    },
+    {
+      "name": "garnish",
+      "contains_allergens":["sesame"],
+      "contains_ingredient_flags":["scallion","sesame_seed"],
+      "notes": "scallions and sesame seeds, can be removed upon request"
+    }
+  
+  ],
+
+  "cross_contact_risk": ["shellfish"],
+
+  "modifications": [
+    {
+      "when": {
+        "avoid_ingredient_flags" :["scallion","sesame_seed"]
+      },
+      "action": "remove",
+      "target_component": "garnish",
+      "notes": "Can be made without scallions and sesame seeds upon request"
+    }
+  ],
+
+  "tags": [],
+  "pairing_tags": []
+},
+    {
+  "id": "E02",
+  "name": "Steamed Black Seabass",
+  "category": "entree",
+
+  "components": [
+    {
+      "name": "fish",
+      "contains_allergens": ["fish"],
+      "contains_ingredient_flags": [],
+      "notes": ""
+    },
+    {
+      "name": "soy sauce",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": ["soy_sauce"],
+      "notes": "soy sauce contains gluten, can be substituted with tamari"
+    }
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [
+    {
+      "when": {
+        "avoid_allergens": ["gluten"]
+      },
+      "action": "substitute",
+      "target_component": "soy sauce",
+      "substitute_with": "tamari",
+      "notes": "Tamari is a gluten-free alternative to soy sauce"
+    }
+  ],
+
+  "tags": ["gluten_free_option"],
+  "pairing_tags": []
+},
+    {
+  "id": "E03",
+  "name": "Roast Duck",
+  "category": "entree",
+
+  "components": [
+    {
+      "name": "duck",
+      "contains_allergens": [],
+      "contains_ingredient_flags": [],
+      "notes": ""
+    },
+    {
+      "name": "steamed buns",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": [],
+      "notes": "buns contain gluten"
+    },
+    {
+      "name": "pickled vegetables",
+      "contains_allergens": [],
+      "contains_ingredient_flags": [],
+      "notes": ""
+    },
+    {
+      "name": "sauce",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": [],
+      "notes": "sauce contains gluten"
+    }
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [
+  {
+    "when": { "avoid_allergens": ["gluten"] },
+    "action": "remove",
+    "target_component": "steamed buns",
+    "notes": "Can be made without buns, served with extra vegetables"
+  },
+  {
+    "when": { "avoid_allergens": ["gluten"] },
+    "action": "remove",
+    "target_component": "sauce",
+    "notes": "Can be made without sauce upon request"
+  }
+],
+
+  "tags": [],
+  "pairing_tags": []
+},
+    {
+  "id": "E04",
+  "name": "Stir Fried Lamb",
+  "category": "entree",
+
+  "components": [
+    {
+      "name": "lamb",
+      "contains_allergens": [],
+      "contains_ingredient_flags": [],
+      "notes": ""
+    },
+    {
+      "name": "marinade",
+      "contains_allergens": ["gluten"],
+      "contains_ingredient_flags": [],
+      "notes": "marinade contains gluten, cannot be removed"
+    }
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [],
+
+  "tags": [],
+  "pairing_tags": []
+},
+    {
+  "id": "E05",
+  "name": "Black Pepper Wagyu Beef",
+  "category": "entree",
+
+  "components": [
+    {
+      "name": "wagyu beef",
+      "contains_allergens": [],
+      "contains_ingredient_flags": [],
+      "notes": ""
+    },
+    {
+      "name": "egg noodles",
+      "contains_allergens": ["gluten", "egg"],
+      "contains_ingredient_flags": [],
+      "notes": "noodles contain gluten and egg"
+    }
+  ],
+
+  "cross_contact_risk": [],
+
+  "modifications": [],
+
+  "tags": [],
+  "pairing_tags": []
+}
+
+  ]
+}
