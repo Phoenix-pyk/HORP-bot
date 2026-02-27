@@ -29,3 +29,4 @@ Outputs include:
 See:
 - Technical Specifications (docs/Technical_Specifications.pdf)
 - Vision Document (docs/Vision_Document.pdf)
+- demo video - https://youtu.be/iBYvJ7ZyIW0
